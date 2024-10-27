@@ -1,0 +1,265 @@
+.Title-courses {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center; /* Asigură centrare orizontală a textului */
+    padding: 20px; /* Adaugă padding pentru margini pe ecrane mici */
+}
+
+.block-title {
+    display: block;
+}
+
+.Title-courses h1 {
+    color: var(--text-white);
+    font-size: 3rem; /* Dimensiune de titlu pentru desktop */
+    margin-bottom: 20px;
+}
+
+.Title-courses p {
+    color: var(--text-light);
+    font-size: 1.25rem; /* Dimensiune a textului descriptiv */
+}
+
+/* Media Query pentru telefoane mobile */
+@media (max-width: 768px) {
+    .Title-courses {
+        height: 100vh; /* Înlătură înălțimea fixă pe mobil */
+        padding: 40px 20px; /* Ajustează padding-ul pentru margini */
+    }
+
+    .Title-courses h1 {
+        font-size: 2rem; /* Diminuează dimensiunea titlului pe ecrane mici */
+    }
+
+    .Title-courses p {
+        font-size: 1rem; /* Diminuează textul descriptiv pe ecrane mici */
+    }
+}
+
+
+
+
+/* courses section */
+.courses h2 {
+    margin: var(--spacing-large) 0;
+    text-align: center;
+}
+
+/* stilizarea se aplica doar pe un element care are in ACELASI TIMP clasele container si grid. */
+.courses .container.grid {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.courses .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: var(--spacing-large);
+}
+
+.courses .course-wrapper {
+    width: calc(100% / 3);
+
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+}
+
+.courses .course {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: var(--spacing-tiny);
+
+}
+
+.courses h3 {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.courses span {
+    font-size: var(--fs-medium);
+    color: var(--text-dark);
+}
+
+.courses .material-symbols-outlined {
+    /* vertical align aliniaza pe verticala elementele inline */
+    vertical-align: middle;
+}
+
+.course .date,
+.courses .place {
+    padding: var(--spacing-tiny);
+}
+
+.courses .place {
+    background-color: var(--text-secondary);
+    margin-left: var(--spacing-tiny);
+}
+
+.courses .course,
+.courses h3,
+.courses .badges {
+    margin-bottom: var(--spacing-medium);
+}
+
+.courses .bar {
+    height: var(--spacing-tiny);
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+.courses .content {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+@media (max-width: 992px) {
+    .courses .course-wrapper {
+        width: 50%;
+    }
+}
+
+/* @media screen and (min-width:768px) and (max-width:992px) {
+    
+    } */
+
+@media (max-width: 768px) {
+    .courses .course-wrapper {
+        width: 100%;
+    }
+}
+
+
+
+/* details section */
+
+.details {
+    margin: 5% 5%;
+}
+
+.details p{
+    color: #000;
+}
+
+.details .container {
+    display: grid;
+    /* Activează CSS Grid */
+    grid-template-columns: 1fr 1fr;
+    /* Două coloane egale */
+    gap: 2rem;
+    /* Spațiu între coloane */
+    padding: 2rem;
+}
+
+.details .upper-text {
+    margin-left: 17%;
+    color: #929191;
+}
+
+.details .image-details img {
+    width: 100%;
+    /* Ajustează lățimea la 100% din containerul său */
+    max-width: 500px;
+    /* Setează o lățime maximă, de exemplu 300px */
+    height: auto;
+    /* Păstrează proporțiile imaginii */
+}
+
+.container .text-details p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.container .text-details h2 {
+    margin-bottom: 20px;
+}
+
+/* Media Query pentru telefoane mobile */
+@media (max-width: 768px) {
+    .details {
+        margin: 5% 2%;
+    }
+
+    .details .container {
+        grid-template-columns: 1fr;
+        /* O singură coloană pe ecrane mici */
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .details .upper-text {
+        margin-left: 0;
+        text-align: center; /* Centrează textul pe ecrane mici */
+        margin-bottom: 1rem;
+    }
+
+    .details .image-details img {
+        max-width: 100%;
+        /* Imaginea va ocupa întreg spațiul disponibil */
+       margin-left: 10px;
+        
+    }
+
+    .container .text-details p {
+        font-size: 16px;
+        /* Diminuează puțin dimensiunea textului */
+        text-align: justify;
+    }
+
+    .container .text-details h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        /* Centrează titlul pe mobil */
+    }
+}
+
+
+
+/* Sectiunea ajutor  */
+
+.help-section {
+    width: 100%;
+    height: 50vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrează pe verticală */
+    text-align: center;
+}
+
+.help-content {
+    max-width: 800px; /* Limitează lățimea conținutului */
+    padding: 20px; /* Ajustează padding-ul */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrează pe orizontală */
+}
+
+.help-section h2,
+.help-section p {
+    color: var(--text-light);
+    margin-bottom: 20px; /* Spațiere între elemente */
+}
+
+.help-section .submit {
+    background-color: var(--button-color); /* Culoarea verde */
+    color: #ffffff; /* Text alb */
+    border: none; /* Fără margine */
+    padding: 15px 30px; /* Spațiere interioară */
+    font-size: 16px; /* Dimensiune text */
+    font-weight: bold; /* Text bold */
+    border-radius: 50px; /* Colțuri rotunjite mari */
+    cursor: pointer; /* Cursor de tip "pointer" la hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbra butonului */
+    transition: 0.3s ease; /* Tranziție lină pentru hover */
+    margin-top: 20px;
+}
+
+.help-section .submit:hover {
+    background-color:  #187356; /* Culoare mai închisă la hover */
+}
